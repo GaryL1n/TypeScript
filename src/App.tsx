@@ -1,5 +1,6 @@
 import React, { createContext, FC } from 'react';
 import './App.css';
+import FormTry from './FormTry';
 import TextField, { HairColor } from './TextField';
 
 interface AppContextInterface {
@@ -16,7 +17,7 @@ function App() {
     return (
         <AppContext.Provider value={contextValue}>
             <>
-                <TextField
+                {/* <TextField
                     text="Hello"
                     ok={false}
                     fn={function (bob: string): string {
@@ -24,7 +25,8 @@ function App() {
                     }}
                     person={{ name: 'Gary', age: 24 }}
                     hairColor={HairColor.Red}
-                />
+                /> */}
+                <FormTry />
             </>
         </AppContext.Provider>
     );
