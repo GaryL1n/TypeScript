@@ -1,5 +1,6 @@
 import React, { createContext, FC } from 'react';
 import './App.css';
+import FormPage from './FormPage';
 import FormTry from './FormTry';
 import TextField, { HairColor } from './TextField';
 
@@ -26,7 +27,8 @@ function App() {
                     person={{ name: 'Gary', age: 24 }}
                     hairColor={HairColor.Red}
                 /> */}
-                <FormTry />
+                {/* <FormTry /> */}
+                <FormPage />
             </>
         </AppContext.Provider>
     );
