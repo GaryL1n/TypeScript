@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { createContext, FC } from 'react';
 import './App.css';
+import FormPage from './FormPage';
+import FormTry from './FormTry';
+import HookForm from './HookForm';
+import HookFormTwo from './HookFormTwo';
+import TextField, { HairColor } from './TextField';
+
+interface AppContextInterface {
+    girlFriend: string;
+    girlAge: number;
+}
+export const AppContext = createContext<AppContextInterface | null>(null);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const contextValue: AppContextInterface = {
+        girlFriend: '林玟葶',
+        girlAge: 21,
+    };
+    return (
+        <AppContext.Provider value={contextValue}>
+            <>
+                {/* <TextField
+                    text="Hello"
+                    ok={false}
+                    fn={function (bob: string): string {
+                        throw new Error('Function not implemented.');
+                    }}
+                    person={{ name: 'Gary', age: 24 }}
+                    hairColor={HairColor.Red}
+                /> */}
+                {/* <FormTry /> */}
+                {/* <FormPage /> */}
+                <HookForm />
+                {/* <HookFormTwo /> */}
+            </>
+        </AppContext.Provider>
+    );
 }
 
 export default App;
