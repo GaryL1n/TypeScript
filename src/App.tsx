@@ -2,6 +2,8 @@ import React, { createContext, FC } from 'react';
 import './App.css';
 import FormPage from './FormPage';
 import FormTry from './FormTry';
+import HookForm from './HookForm';
+import HookFormTwo from './HookFormTwo';
 import TextField, { HairColor } from './TextField';
 
 interface AppContextInterface {
@@ -28,7 +30,9 @@ function App() {
                     hairColor={HairColor.Red}
                 /> */}
                 {/* <FormTry /> */}
-                <FormPage />
+                {/* <FormPage /> */}
+                <HookForm />
+                {/* <HookFormTwo /> */}
             </>
         </AppContext.Provider>
     );

@@ -2,14 +2,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100vh;
+  /* height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative; */
 }
 
-pre {
+/* pre {
   position: absolute;
   top: 80%;
-}
+} */
